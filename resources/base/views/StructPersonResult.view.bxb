@@ -1,0 +1,21 @@
+result-view {
+  match: StructPerson(this)
+  render {
+    layout {
+      section {
+        content {
+          single-line {
+            text ("Name: #{value(this.name)}")
+          }
+        }
+      }
+      section {
+        content {
+          single-line {
+            text ("Age: #{raw(this.age)}")
+          }
+        }
+      }
+    }
+  }
+}

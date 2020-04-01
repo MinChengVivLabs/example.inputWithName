@@ -1,0 +1,18 @@
+action (GetAllNames) {
+  description (__DESCRIPTION__)
+  type (Search)
+  collect {
+    computed-input (self) {
+      type (self.Self)
+      min (Optional) max (One)
+      compute {
+        intent {
+          goal: self.Self
+          route: self.GetImaginarySelf // for developers has NO Samsung device
+          // route: self.GetSelf // for release
+        }
+      }
+    }
+  }
+  output (TextName)
+}

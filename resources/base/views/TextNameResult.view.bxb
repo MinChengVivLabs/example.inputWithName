@@ -1,0 +1,45 @@
+result-view {
+  match: TextName (this) 
+  message ("In result view")
+  render {
+    if (size(this)>1) {
+      list-of (this) {
+        where-each (item) {
+          title-card {
+            title-area {
+              slot1 {
+                text {
+                  value ("#{value(item)}")
+                  style (Title_XL_Soft)
+                }               
+              }
+            }
+          }
+        }
+      }
+    }
+    else-if (size(this)==1) {
+      layout {
+        section {
+          content {
+            title-area {
+              slot1 {
+                text {
+                  value ("Name is #{value(this)}")
+                  style (Title_L)
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  conversation-drivers {
+    if (size(this)==1) {
+      conversation-driver ("Enter age")
+      conversation-driver ("Enter age 18")
+      conversation-driver ("Enter age 18 or 21")
+    }
+  }
+}

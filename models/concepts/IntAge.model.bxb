@@ -1,0 +1,3 @@
+integer (IntAge) {
+  description (__DESCRIPTION__)
+}

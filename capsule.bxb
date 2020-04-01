@@ -1,0 +1,21 @@
+capsule {
+  id (example.inputWithName)
+  version (0.1.0)
+  format (3)
+  targets {
+    target (bixby-mobile-en-US)
+  }
+  runtime-version (3)
+  capsule-imports {
+    import (viv.self) {
+      as (self) 
+      version (3.5.213)
+    }
+  }
+  permissions {
+    user-profile-access
+  }
+  store-countries {
+    all
+  }
+}

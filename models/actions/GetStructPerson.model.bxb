@@ -1,0 +1,23 @@
+action (GetStructPerson) {
+  description (__DESCRIPTION__)
+  type (Constructor) 
+  collect {
+    input (name) {
+      type (TextName)
+      min (Required) max (One)
+    }
+    input (age) {
+      type (IntAge) 
+      min (Required) max (One)
+      // default-init {
+      //   intent {
+      //     goal: IntAge
+      //     value: IntAge(1)
+      //     // value: IntAge(2)
+      //   }
+      // }
+      prompt-behavior (AlwaysSelection)
+    }
+  }
+  output (StructPerson)
+}

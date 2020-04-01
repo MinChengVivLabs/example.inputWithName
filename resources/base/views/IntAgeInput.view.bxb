@@ -1,0 +1,52 @@
+input-view {
+  match: IntAge(this) {
+    to-input: GetStructPerson (action)
+  }
+  message {
+    template ("Enter age of #{value(action.name)}")
+  }
+  render {
+    if (size(this)==1) {
+      layout {
+        section {
+          content {
+            title-area {
+              slot1 {
+                text ("You sure are #{value(this)} years old?")
+              }
+            }
+          }
+        }
+        select-button-text ("confirm")
+      }
+    }
+    else-if (size(this)>1) {
+      selection-of (this) {
+        where-each (item) {
+          title-card {
+            title-area {
+              slot1 {
+                text ("Select #{value(item)}")
+              }
+            }
+          }
+        }
+      }
+    }
+    else {
+      form {
+        elements {
+          number-input {
+            id (that)
+            label (Age)
+            type (IntAge) 
+          }
+        }
+        on-submit {
+          goal: IntAge
+          value: viv.core.FormElement(that)
+        }
+      }
+    }
+  }
+}

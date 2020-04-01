@@ -1,0 +1,11 @@
+structure (StructPerson) {
+  description (__DESCRIPTION__)
+  property (name) {
+    type (TextName)
+    min (Required) max (One)
+  }
+  property (age) {
+    type (IntAge)
+    min (Required) max (One)
+  }
+}
