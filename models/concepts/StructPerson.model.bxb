@@ -8,4 +8,8 @@ structure (StructPerson) {
     type (IntAge)
     min (Required) max (One)
   }
+  property (room) {
+    type (IntRoom) 
+    min (Required) max (One)
+  }
 }

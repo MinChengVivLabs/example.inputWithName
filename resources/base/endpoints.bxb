@@ -10,7 +10,7 @@ endpoints {
       local-endpoint (GetAllNames.js)
     }
     action-endpoint (GetStructPerson) {
-      accepted-inputs (name, age) 
+      accepted-inputs (name, age, room) 
       local-endpoint (GetStructPerson.js)
     }
 

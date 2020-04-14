@@ -18,6 +18,10 @@ action (GetStructPerson) {
       // }
       prompt-behavior (AlwaysSelection)
     }
+    input (room) {
+      type (IntRoom)
+      min (Required) max (One)
+    }
   }
   output (StructPerson)
 }

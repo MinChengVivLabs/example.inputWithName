@@ -16,6 +16,13 @@ result-view {
           }
         }
       }
+      section {
+        content {
+          single-line {
+            text ("Room: #{raw(this.room)}")
+          }
+        }
+      }
     }
   }
 }
