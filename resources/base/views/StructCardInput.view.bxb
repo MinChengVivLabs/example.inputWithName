@@ -1,0 +1,29 @@
+input-view {
+  match: StructCard(this) 
+  message: template ("Give me your card") 
+  render {
+    form {
+      elements {
+        text-input {
+          id (aaa) 
+          label("Card Number")
+          type (TextCardNumber)
+          value("Costco Citi")
+        }
+        text-input {
+          id (bbb) 
+          label("Card CVV")
+          type (TextCardCvv)
+          value("No WAY")
+        }
+      }
+      on-submit {
+        goal: StructCard
+        value: StructCard {
+          cardNumber: viv.core.FormElement(aaa)
+          cardCvv: viv.core.FormElement(bbb)
+        }
+      }
+    }
+  }
+}

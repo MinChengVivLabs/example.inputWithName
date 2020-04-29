@@ -1,0 +1,4 @@
+result-view {
+  match: StructCard(this) 
+  message: template ("Card #{value(this.cardNumber)} with CVV #{value(this.cardCvv)}")
+}

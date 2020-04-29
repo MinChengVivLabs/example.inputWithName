@@ -1,0 +1,11 @@
+structure (StructCard) {
+  description (__DESCRIPTION__)
+  property (cardNumber) {
+    type (TextCardNumber)
+    min (Required) max (One)
+  }
+  property (cardCvv) {
+    type (TextCardCvv)
+    min (Required) max (One)
+  }
+}

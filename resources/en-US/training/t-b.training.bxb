@@ -1,0 +1,5 @@
+train (t-bfqqfiex3s2dk1l9ovdkfj7k5) {
+  utterance ([g:StructCard,r:GetStructCard] tell me your card)
+  plan (Y2BmUEitSMwtyEnVy8wrKC0JzyzJ8EvMTdULLikqTS5xTixKYVDGrsI9tQRJEWFjmBgYgZgBSDIygACEzQAA)
+  last-modified (1588181570920)
+}
