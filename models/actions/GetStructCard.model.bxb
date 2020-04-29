@@ -1,0 +1,26 @@
+action (GetStructCard) {
+  description (__DESCRIPTION__)
+  type (Constructor)
+  collect {
+    // input (cardNumber) {
+    //   type (TextCardNumber)
+    //   min (Required) max (One)
+    // }
+    // input (cardCvv) {
+    //   type (TextCardCvv) 
+    //   min (Required) max (One)
+    // }
+    input (card) {
+      type (StructCard)
+      min (Required) max (One)
+    }
+  }
+  output (StructCard) {
+    evaluate {
+      StructCard {
+        cardNumber: $expr(card.cardNumber),
+        cardCvv: $expr(card.cardCvv)
+      }
+    }
+  }
+}
